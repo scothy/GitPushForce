@@ -11,6 +11,7 @@ export default function Card(props) {
 // ne pas oublier le status via back-end
 const [status, setStatus] = useState('En cours');
 
+
     return (
       <Col xs={12} sm={6} md={6} lg={4} style={{marginBottom:"4%"}}>
         <div className="card-container" style={{backgroundColor:props.color}}>

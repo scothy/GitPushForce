@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../Card/Card";
 import skills from "../../../skills";
 import teams from "../../../teams";
@@ -33,6 +33,27 @@ function CardList() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [modalText, setModalText] = useState("Create your teams");
+
+
+  useEffect(() => {
+   
+      resquestApi();
+    
+  }, []); 
+
+  const resquestApi = async () => {
+    const cors = "";
+    const endpoint ="";
+    const encodedEndpoint = encodeURIComponent(endpoint);
+    try {
+      const resquest = await fetch(`${cors}${encodedEndpoint}`);
+      const json = await resquest.json();
+      const { results } = JSON.parse(json.contents);
+     console.log(results)
+    } catch (e) {
+      console.log(`Error : ${e}.`);
+    }
+  };
   const handleOk = () => {
     setModalText("The modal will be closed after two seconds");
     setConfirmLoading(true);
