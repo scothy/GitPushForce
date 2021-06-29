@@ -25,9 +25,16 @@ export default function CardList() {
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [team, setTeam] = useState({});
   const [skills, setSkills] = useState([]);
+
+  const [projectName, setProjectName] = useState('');
+  const [description, setDescription] = useState('');
+  const [jobList, setJobList] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [duration, setDuration] = useState('');
+  const [price, setPrice] = useState('');
+
+
   
-
-
   const options = [];
 
 for (let i = 0; i < skills.length; i++) {
@@ -38,28 +45,34 @@ for (let i = 0; i < skills.length; i++) {
   });
 }
  
-  
   useEffect(() => {
     
     resquestApi()
     resquestSkills()
-  },[]);  
+  },[]); 
+
+  useEffect(() => {
+    
+console.log(projectName)
+console.log(description)
+console.log(startDate)
+  },[projectName]);  
   
+
   const resquestApi = async () => {
     const endpoint =  "http://localhost:5000/team/user/1";
     try {
       const resquest = await fetch(`${endpoint}`);
       const json = await resquest.json();
-      await  setTeam(json);
+      await setTeam(json);
+      console.log(json)
     } catch (e) {
       console.log(`Error : ${e}.`);
     }
   };
 
-
   const resquestSkills = async () => {
     const endpoint =  "http://localhost:5000/job/";
-    
     try {
       const resquest = await fetch(`${endpoint}`);
       const json = await resquest.json();
@@ -97,6 +110,8 @@ for (let i = 0; i < skills.length; i++) {
   const priceValue2 = (value) => {
     console.log("changed", value);
   };
+
+
   return (
     <Container style={{ marginTop: "4%" }}>
       <div id="teams">
@@ -129,9 +144,9 @@ for (let i = 0; i < skills.length; i++) {
      
         <Space direction="vertical" style={{ width: "100%" }}>
           <Title level={5}>Project's Name</Title>
-          <Input placeholder="Name" />
+          <Input onChange={((e) => {setProjectName(e.target.value)})} value={projectName} placeholder="Name" />
           <Title level={5}>Describe your project</Title>
-          <TextArea rows={4} placeholder="Description..." />
+          <TextArea onChange={((e) => {setDescription(e.target.value)})} value={description} rows={4} placeholder="Description..." />
           <Title level={5}>Choose your members</Title>
           <Select
             mode="multiple"
@@ -140,7 +155,7 @@ for (let i = 0; i < skills.length; i++) {
             options={options}
             onChange={handleChange}
           />
-          <Title level={5}>Date</Title>
+          <Title onChange={((e) => {setStartDate(e.target.value)})} value={startDate} level={5}>Date</Title>
           <RangePicker />
           <Title level={5}>Price</Title>
 
@@ -161,17 +176,7 @@ for (let i = 0; i < skills.length; i++) {
               }
               parser={(value) => value.replace(/\$\s?|(,*)/g, "")}
               onChange={priceValue}
-            /> -
-            <InputNumber
-              defaultValue={100}
-              min={0}
-              max={10000}
-              formatter={(value) =>
-                `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-              }
-              parser={(value) => value.replace(/\$\s?|(,*)/g, "")}
-              onChange={priceValue2}
-            />
+            /> 
           </div>
         </Space>
       </Modal>
