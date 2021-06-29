@@ -14,28 +14,44 @@
 .card-container:hover {
     transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
+
+#statut-projet {
+display: flex;
+height:auto;
+margin-top:20px;
+margin-bottom:30px;
+width:100%;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
 #project-name {
     width:100%;
     text-align: center;
-    padding-top: 20px;
+    font-size:22px;
+    padding: 20px 20px 0px 20px;
 }
 
 #project-description{
     font-size: 14px;
     padding: 10px 20px;
+    margin: 2%;
 }
 
 #jobprofil-container {
     display: flex;
     flex-direction: column;
     width:90%;
-    height:60%;
     overflow: auto;
+    align-items: center;
+    margin: 1%;
 }
 
-#statut-projet {
+#statut-projet h2 {
     font-size: 18px;
     width:200px;
+    color:white;
 }
 
 #project-name, #project-description, #statut-projet {

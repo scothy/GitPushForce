@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './Card.css';
 import profil from '../../../data.js';
 import JobProfil from "../JobProfil/JobProfil";
@@ -16,19 +16,22 @@ const [status, setStatus] = useState('En cours');
         <div className="card-container" style={{backgroundColor:props.color}}>
          <h2 id="project-name">{props.nomProjet}</h2>
          <h3 id="project-description">{props.description}</h3>
-          <div id='jobprofil-container'>
+         
+          <div id='jobprofil-container'> 
           {profil.map((elem, index) => {
             return <JobProfil key={index} 
             picture={elem.picture}
             prenom={elem.prenom}
             nom={elem.nom}
-            job={elem.job} />;
+            job={elem.job}
+            status={elem.status} />;
           })}
             </div>
-            <h2 id="statut-projet">{props.status}</h2>
+            <div id="statut-projet">
+            <h2>Statut du projet</h2>
             <Select
     showSearch
-    style={{ width: 200 }}
+    style={{ width: 200}}
     placeholder="Selectionnez un statut"
     value={status}
     onChange={(value) => {setStatus(value)}}
@@ -39,7 +42,8 @@ const [status, setStatus] = useState('En cours');
     <Option value="En cours">En cours</Option>
     <Option value="Terminé">Terminé</Option>
   </Select>
-        </div>
+  </div>
+   </div>
         </Col>
     )
 }

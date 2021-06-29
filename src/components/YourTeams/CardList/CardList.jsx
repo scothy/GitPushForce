@@ -32,7 +32,7 @@ const { TextArea } = Input;
 function CardList() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
-  const [modalText, setModalText] = useState("Content of the modal");
+  const [modalText, setModalText] = useState("Create your teams");
   const handleOk = () => {
     setModalText("The modal will be closed after two seconds");
     setConfirmLoading(true);
@@ -82,20 +82,20 @@ function CardList() {
           })}
       </Row>
       <Modal
-        title="New TEAMS"
+        title="Créer une équipe"
         visible={isModalVisible}
         onOk={handleOk}
         confirmLoading={confirmLoading}
         onCancel={handleCancel}
         okText="Créer"
       >
-        <p>{modalText}</p>
+        {/* <p>{modalText}</p> */}
         <Space direction="vertical" style={{ width: "100%" }}>
-        <Title level={5}>Name</Title>
+        <Title level={5}>Project's Name</Title>
           <Input placeholder="Name" />
-          <Title level={5}>Choisissez votre profession</Title>
+          <Title level={5}>Describe your project</Title>
           <TextArea rows={4} placeholder="Description..." />
-          <Title level={5}>Choisissez votre profession</Title>
+          <Title level={5}>Choose your members</Title>
           <Select
             mode="multiple"
             style={{ width: "100%" }}
@@ -104,7 +104,7 @@ function CardList() {
             onChange={handleChange}
           />
              <Title level={5}>Date</Title>
-          <RangePicker showTime />
+          <RangePicker   />
           <Title level={5}>Price</Title>
          
           <div
@@ -138,6 +138,7 @@ function CardList() {
           </div>
         </Space>
       </Modal>
+      
     </Container>
   );
 }
