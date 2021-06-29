@@ -1,0 +1,62 @@
+const player = [
+  {
+    id: 278,
+    name: "K. Mbappé",
+    firstname: "Kylian",
+    lastname: "Mbappé Lottin",
+    age: 23,
+    birth: { date: "1998-12-20", place: "Paris", country: "France" },
+    nationality: "France",
+    height: "178 cm",
+    weight: "73 kg",
+    injured: false,
+    photo: "https://media.api-sports.io/football/players/278.png",
+  },
+
+  {
+    id: 20535,
+    name: "H. Diallo",
+    firstname: "Habibou Mouhamadou",
+    lastname: "Diallo",
+    age: 26,
+    birth: { date: "1995-06-18", place: "Thies", country: "Senegal" },
+    nationality: "Senegal",
+    height: "186 cm",
+    weight: "79 kg",
+    injured: false,
+    photo: "https://media.api-sports.io/football/players/20535.png",
+  },
+  {
+    id: 550,
+    name: "K. Dolberg",
+    firstname: "Kasper",
+    lastname: "Dolberg",
+    age: 24,
+    birth: {
+      date: "1997-10-06",
+      place: "Silkeborg",
+      country: "Denmark",
+    },
+    nationality: "Denmark",
+    height: "187 cm",
+    weight: "83 kg",
+    injured: false,
+    photo: "https://media.api-sports.io/football/players/550.png",
+  },
+
+  {
+    id: 1374,
+    name: "I. Slimani",
+    firstname: "Islam",
+    lastname: "Slimani",
+    age: 33,
+    birth: { date: "1988-06-18", place: "Alger", country: "Algeria" },
+    nationality: "Algeria",
+    height: "188 cm",
+    weight: "83 kg",
+    injured: false,
+    photo: "https://media.api-sports.io/football/players/1374.png",
+  },
+];
+
+export default player;
