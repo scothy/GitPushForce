@@ -110,7 +110,7 @@ function CardList() {
         onCancel={handleCancel}
         okText="Créer"
       >
-        {/* <p>{modalText}</p> */}
+        <p>{modalText}</p>
         <Space direction="vertical" style={{ width: "100%" }}>
         <Title level={5}>Project's Name</Title>
           <Input placeholder="Name" />
