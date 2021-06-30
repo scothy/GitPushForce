@@ -8,9 +8,8 @@ const { Option } = Select;
 
 
 export default function Card(props) {
-// ne pas oublier le status via back-end
-const [status, setStatus] = useState('En cours');
-
+ 
+const [status, setStatus] = useState(props.status);
 
     return (
       <Col xs={12} sm={6} md={6} lg={4} style={{marginBottom:"4%"}}>
@@ -19,7 +18,7 @@ const [status, setStatus] = useState('En cours');
          <h3 id="project-description">{props.description}</h3>
          
           <div id='jobprofil-container'> 
-          {profil.map((elem, index) => {
+          {profil[props.id].map((elem, index) => {
             return <JobProfil key={index} 
             picture={elem.picture}
             prenom={elem.prenom}
@@ -35,6 +34,7 @@ const [status, setStatus] = useState('En cours');
     style={{ width: 200}}
     placeholder="Selectionnez un statut"
     value={status}
+   
     onChange={(value) => {setStatus(value)}}
     filterOption={(input, option) =>
       option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0

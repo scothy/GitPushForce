@@ -1,45 +1,45 @@
 const teamForMe = [
   {
-    teamName: "zoulou",
+    teamName: "Project player",
     searchProfil: ["web developer", "tech Lead", "data", " integrateur"],
     descriptionProject:
-      "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la",
+      "We want to create a project equivalent to spotify but better because im strong",
   },
   {
-    teamName: "zoulou",
-    searchProfil: ["web developer", "tech Lead", "data", " integrateur"],
+    teamName: "Los angels",
+    searchProfil: ["front developer", "back developer", "data", " designer"],
     descriptionProject:
-      "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la",
+      "Create a new shoes shop, join him and get your money",
   },
   {
-    teamName: "zoulou",
-    searchProfil: ["web developer", "tech Lead", "data", " integrateur"],
+    teamName: "MyEspace",
+    searchProfil: ["mobile developer", "tech Lead", "logiciel designer", "back-end developer"],
     descriptionProject:
-      "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la",
+      "The project is a social application for share a picture versus money ",
   },
   {
-    teamName: "zoulou",
-    searchProfil: ["web developer", "tech Lead", "data", " integrateur"],
+    teamName: "WhatsUp",
+    searchProfil: ["yoga teacher", "gym teacher", "designer", "printer"],
     descriptionProject:
-      "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la",
+      "We want to create a new sports hall only for only girl",
   },
   {
-    teamName: "zoulou",
-    searchProfil: ["web developer", "tech Lead", "data", " integrateur"],
+    teamName: "6up",
+    searchProfil: ["tech system", "data analyst", "ingeneer", " profesionnal cybersecurity"],
     descriptionProject:
-      "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la",
+      "It's a project for securise a house camera ",
   },
   {
-    teamName: "zoulou",
-    searchProfil: ["web developer", "tech Lead", "data", " integrateur"],
+    teamName: "The aildeur scrool offline",
+    searchProfil: ["C++ Developer", "UX design", "java developer", "integrator"],
     descriptionProject:
-      "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la",
+      "it's a nice video game i want to create a copy",
   },
   {
-    teamName: "zoulou",
-    searchProfil: ["web developer", "tech Lead", "data", " integrateur"],
+    teamName: "battlefive",
+    searchProfil: ["guitarist", "pianist", "singer", " barman"],
     descriptionProject:
-      "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la",
+      "I need membder for my concert next week i organize big party",
   },
 ];
 

@@ -13,14 +13,13 @@ const { TextArea } = Input;
 export default function Card(props) {
     let data = props.searchProfil
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const openNotification = () => {
+    
+      const openNotification = placement => {
         notification.success({
-          message: 'Send success',
+          message: `Notification ${placement}`,
           description:
-            'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
-          onClick: () => {
-            console.log('Notification Clicked!');
-          },
+            'Your apply is successfully send. Good Luck !',
+          placement,
         });
       };
 
@@ -30,7 +29,7 @@ export default function Card(props) {
     
       const handleOk = () => {
         setIsModalVisible(false);
-        openNotification()
+        openNotification('bottomRight')
       };
     
       const handleCancel = () => {
@@ -40,14 +39,14 @@ export default function Card(props) {
         <>
         
             <Col xs={12} sm={6} md={6} lg={4} style={{marginBottom:"4%"}}>
-        <div className="card-container" style={{backgroundColor:props.color}} data-aos="fade-down"
+        <div className="card-container" id="card2" style={{backgroundColor:props.color}} data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1000">
          <h2 id="project-name">{props.teamName}</h2>
          
         
         <div style={{width:'100%', overflow:'auto'}}>
-        <h2 id="project-name">profil recherche</h2>
+        <h2 id="project-name">is looking for :</h2>
             <ListGroup>
         {data && data.map((elem, index) => {
             return (
@@ -62,12 +61,13 @@ export default function Card(props) {
         <div className='description'>
         <h2 id="project-name">Description</h2>
          <p style={{ margin:'auto', padding:'2%', textAlign:'center'}}>{props.descriptionProject}</p>
-         <Button type="primary" onClick={showModal}>Apply</Button>
+         <Button type="primary" id="button-modal" onClick={showModal}>Apply</Button>
+         
         </div>
    </div>
         </Col>
         <Modal title={props.teamName} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-        <p>Some contents...</p>
+        <p>Describe your profil</p>
         <TextArea rows={4} />
       </Modal>
       </>

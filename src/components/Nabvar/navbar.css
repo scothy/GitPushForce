@@ -8,3 +8,10 @@
     justify-content: space-between;
     align-items: center;
   }
+  .sticky-top{
+    background-color: #E65D37;
+  }
+
+  .name-header {
+    color: #ffff !important;
+  }

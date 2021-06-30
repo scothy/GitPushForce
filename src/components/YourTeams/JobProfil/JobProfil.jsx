@@ -21,7 +21,7 @@ const JobProfil = (props) => {
     return (
         <>
         <div id="jobprofil">
-            <img id="profil-picture" src={ props.status ? props.picture : "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"} alt={props.prenom}></img>
+            <img id="profil-picture" src={ props.status ? props.picture : "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"} alt={props.prenom}></img>
             <div id="profil-content">
             <p className="profil-p" id="name">{props.job}</p>
             <p className="profil-p"> {props.status ?  `${props.prenom} ${props.nom}` :  "Looking for" }</p>

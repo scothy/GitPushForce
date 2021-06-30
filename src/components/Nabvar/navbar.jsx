@@ -7,15 +7,12 @@ import { Nav, Navbar, Button } from "react-bootstrap";
 import NavDropdown from "react-bootstrap/esm/NavDropdown";
  import './navbar.css'
  
-import { useTranslation } from "react-i18next";
-
 function Navigation(props) {
-  const [t] = useTranslation("global");
+  
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg="dark"
       variant="dark"
       className="sticky-top"
     >
@@ -29,7 +26,7 @@ function Navigation(props) {
         
           <NavDropdown
             title="Lang"
-            className="liens"
+            className="liens name-header"
             id="collasible-nav-dropdown"
           >
             <NavDropdown.Item className="lng" onClick={() => props.changeLng("fr")}>
@@ -50,7 +47,7 @@ function Navigation(props) {
           </NavDropdown>
         </Nav>
         <Nav>
-          <Nav.Link>Hello Mehdi</Nav.Link>
+          <Nav.Link className="name-header">Hello Mehdi</Nav.Link>
           <Button onClick={()=> console.log('test')}>Deconnexion</Button>
         </Nav>
       </Navbar.Collapse>
